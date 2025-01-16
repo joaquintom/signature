@@ -3,243 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Firmas HTML</title>
+    <title>Firma Openbiz</title>
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
         }
 
         .signature {
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr; /* Una columna central para la línea divisoria */
+            grid-template-rows: auto auto;
+            gap: 10px; /* Espaciado entre elementos */
+            background: #fff;
             border: 1px solid #ddd;
-            padding: 15px;
-            margin: 20px 0;
-            max-width: 350px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            gap: 5px;
-        }
-
-        /*ejemplo 2*/
-        .signature2{
-            color: white;
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 20px 0;
-            max-width: 350px;
+            padding: 15px; /* Espaciado general */
             border-radius: 8px;
-            background-color: #192A34;
-            gap: 5px;
-
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 450px; /* Ancho máximo */
+            width: 100%;
         }
 
-        .signature2 a {
-            color: #5594BB;
-            text-decoration: none;
+        .divider {
+            grid-column: 2; /* La línea divisoria ocupa la segunda columna */
+            grid-row: 1 / span 2; /* Abarca ambas filas */
+            background-color: #032631; /* Color de la línea */
+            width: 2px;
+            margin: 0 auto; /* Centrado */
         }
 
-        .firmaDiseno2{
-            border-left: 1px solid #fff;
-            padding-left: 15px;
-        }
-
-        /*ejemplo imagen de fondo*/
-        .signatureImagen{
-          
-           
-            padding: 15px;
-            margin: 20px 0;
-            max-width: 550px;
-            max-height: 150px;
-            background-image: url(images/fondo-firma-openbiz.jpg);
-            background-size: cover;
-            background-position: center;
-            gap: 5px;
-        }
-
-
-         /*ejemplo imagen de fondo2*/
-         .signatureImagen2{
-          
-           
-          padding: 15px;
-          margin: 20px 0;
-          max-width: 550px;
-          max-height: 150px;
-          background-image: url(images/fondo-firma-openbiz-border.jpg);
-          background-size: cover;
-          background-position: center;
-          gap: 5px;
-      }
-        
-        .signature img {
-        
-            width: 143px;
-            height: 33px;
-        }
-        .signature h3, .signature p {
-            margin: 5px 5px;
-        }
-        .signature a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .signature a:hover {
-            text-decoration: underline;
-        }
-        .info {
+        .logo {
+            grid-column: 1; /* Primera columna */
+            grid-row: 1;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 15px;
         }
 
-        .firmaDiseno{
-            border-left: 1px solid #000000;
-            padding-left: 15px;
-        }
-
-    
-        .social-icons {
-            margin-top: 10px;
-        }
-        .social-icons a {
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .social-icons img {
-            width: 24px;
-            height: 24px;
-        }
-
-        h3{
-            font-size: 1.2em;
-            margin: 0px;
+        .logo img {
+            max-width: 180px; /* Tamaño del logo */
+            height: auto;
             
         }
 
-        h4{
-            font-size: 1em;
-            margin: 0px;
+        .phrase {
+            grid-column: 1; /* Primera columna */
+            grid-row: 2;
+            text-align: center;
+            font-size: 0.9rem; /* Tamaño de la fuente */
+            color: #032631;
+            font-weight: normal;
+            margin: 0; /* Margen ajustado */
+           
+        }
+
+        .info {
+            grid-column: 3; /* Tercera columna */
+            grid-row: 1;
+            text-align: left;
+            margin-left: 15px;
+        }
+
+        .info h1 {
+            margin: 0;
+            font-size: 1.5rem; /* Tamaño del título */
+            color: #032631;
+        }
+
+        .info p {
+            margin: 2px 0; /* Espacio entre párrafos */
+            font-size: 0.9rem; /* Tamaño de la fuente */
+            color: #707070;
+        }
+
+        .info a {
+            text-decoration: none;
+            color: #001EFF;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
-        p {
-            font-size: 0.8em;
-
+        .icons {
+            grid-column: 3; /* Tercera columna */
+            grid-row: 2;
+            text-align: left;
+            margin-left: 15px;
+            display: flex;
+            justify-content: left;
+            gap: 8px; /* Espacio entre íconos */
         }
 
+        .icons a {
+            text-decoration: none;
+            color: #032631;
+            font-size: 1.3rem; /* Tamaño de los íconos */
+        }
+
+        .icons a:hover {
+            color: #001EFF;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Firma 1 -->
     <div class="signature">
+        <div class="logo">
+            <img src="./images/gif.gif" alt="Openbiz firma logo">
+        </div>
+        <div class="divider"></div> <!-- Línea divisora en el centro -->
         <div class="info">
-            <img src="../firma/images/logos-openbiz 3.gif" alt="Foto de perfil">
-            <div class="firmaDiseno">
-                <h3>joaquin Tommasi</h3>
-                <h4>Diseñador</h4>
-                <p><a href="mailto:joaquin@openbiz.io">joaquin@openbiz.io</a></p>
-                <p><a href="tel:+5491173622129">+54 9 11 73622129</a></p>
-            </div>
+            <h1>Julian Drago</h1>
+            <p>Founder & Ceo</p>
+            <a href="https://openbiz.io" target="_blank">openbiz.io</a>
+        </div>
+        <div class="phrase">Peace of mind</div>
+        <div class="icons">
+            <a href="https://x.com/Openbiz_io" target="_blank">
+                <img width="20px" height="auto" src="./images/twitter-x-logo.webp" alt="Twitter">
+            </a>
+            <a href="https://www.linkedin.com/company/openbiz-io/" target="_blank">
+                <img width="20px" height="auto" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+            </a>
         </div>
     </div>
-
-
-        <!-- Firma 2 -->
-        <div class="signature2">
-            <div class="info">
-                <img src="../firma/images/logo-web-openbiz-white.png" alt="Foto de perfil">
-                <div class="firmaDiseno2">
-                    <h3>joaquin Tommasi</h3>
-                    <h4>Diseñador</h4>
-                    <p><a href="mailto:joaquin@openbiz.io">joaquin@openbiz.io</a></p>
-                    <p><a href="tel:+5491173622129">+54 9 11 73622129</a></p>
-                </div>
-            </div>
-        </div>
-
-
-          <!-- Firma con redes sociales -->
-    <div class="signature">
-        <div class="info">
-            <img src="../firma/images/logos-openbiz 3.gif" alt="Logo">
-            <div class="firmaDiseno">
-                <h3>Joaquín Tommasi</h3>
-                <h4>Diseñador</h4>
-                <p><a href="mailto:joaquin@openbiz.io">joaquin@openbiz.io</a></p>
-                <p><a href="tel:+5491173622129">+54 9 11 73622129</a></p>
-                <!-- Íconos de redes sociales -->
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/tuusuario" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    </a>
-                    <a href="https://www.linkedin.com/in/tuusuario" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/tuusuario" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-          <!-- Firma con redes sociales Azul -->
-    <div class="signature2">
-        <div class="info">
-            <img src="../firma/images/logo-web-openbiz-white.png" alt="Logo">
-            <div class="firmaDiseno2">
-                <h3>Joaquín Tommasi</h3>
-                <h4>Diseñador</h4>
-                <p><a href="mailto:joaquin@openbiz.io">joaquin@openbiz.io</a></p>
-                <p><a href="tel:+5491173622129">+54 9 11 73622129</a></p>
-                <!-- Íconos de redes sociales -->
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/tuusuario" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    </a>
-                    <a href="https://www.linkedin.com/in/tuusuario" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/tuusuario" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--imagen de fondo-->
-     
-      <div class="signatureImagen">
-        <div class="info">
-            <img src="../firma/images/logo-web-openbiz-black.png" alt="Logo">
-            <div class="firmaDiseno2">
-                <h3>Joaquín Tommasi</h3>
-                <h4>Diseñador</h4>
-                <p><a href="mailto:joaquin@openbiz.io">joaquin@openbiz.io</a></p>
-                <p><a href="tel:+5491173622129">+54 9 11 73622129</a></p>
-               
-            </div>
-        </div>
-    </div>
-
-    <!--imagen de fondo 2-->
-     
-    <div class="signatureImagen2">
-        <div class="info">
-            <img src="../firma/images/logos-openbiz 3.gif" alt="Logo">
-            <div class="firmaDiseno2">
-                <h3>Joaquín Tommasi</h3>
-                <h4>Diseñador</h4>
-                <p><a href="mailto:joaquin@openbiz.io">joaquin@openbiz.io</a></p>
-                <p><a href="tel:+5491173622129">+54 9 11 73622129</a></p>
-               
-            </div>
-        </div>
-    </div>
-
- 
 </body>
 </html>
